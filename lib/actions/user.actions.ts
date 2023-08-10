@@ -4,14 +4,23 @@ import { revalidatePath } from "next/cache";
 import User from "../models/user.model";
 import { connectionToDB } from "../mongoose";
 
-export async function udpateUser(
+interface Params {
     userId: string,
     username: string,
     name: string,
     bio: string,
     image: string,
     path: string,
-): Promise<void> {
+}
+
+export async function udpateUser({
+    userId,
+    username,
+    name,
+    bio,
+    image,
+    path,
+}: Params): Promise<void> {
     connectionToDB();
 
     try {
