@@ -18,7 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 // import { UserValidation } from "@/lib/validations/user";
 import { ThreadValidation } from "@/lib/validations/thread";
-import { createThread } from "@/lib/actions/thread.action";
+import { createThread } from "@/lib/actions/thread.actions";
 
 interface Props {
   user: {
